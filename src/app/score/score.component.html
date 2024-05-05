@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body style="background-color:#1ED760; text-align: center;">
+    <h1><em>Good Job!</em></h1><br>
+    <h2>Your Score: </h2>
+    <p>{{playersScore}} / 4</p><br>
+    <p>To enter your score to the leader board, enter your name then submit!</p>
+    <p>If not, click Home to return directly to main menu.</p>
+    <form (submit)="onSubmit()">
+        <input [(ngModel)]="playerName"[ngModelOptions]="{standalone: true}">
+     </form>
+    <button class="button" href="/" (click)="onSubmit()">Submit</button>
+    <a routerLink="/" routerLinkActive="active" class="button">Home</a>
+    <p>To view leader board, go to Settings from Home!</p>
+    
+  </body>
+</html>

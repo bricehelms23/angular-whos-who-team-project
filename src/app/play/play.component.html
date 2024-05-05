@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="play.component.css">
+</head>
+<body>
+
+<h1><em>What is the name of this song?</em></h1>
+<!-- <p style="text-align: center;">This is a paragraph.</p> -->
+<!-- <div  *ngIf="recievedData"> -->
+    <div>
+        <button class="button" (click)="onSubmit1()">PLAY</button>
+        
+    </div>
+    <app-card *ngIf="dataFromApi"
+    [id] = 1
+    [dataRecieved] = "dataFromApi"
+    [option1] = "firstCardOptions[0]"
+    [option2] = "firstCardOptions[1]"
+    [option3] = "firstCardOptions[2]"
+    [option4] = "firstCardOptions[3]"
+    ></app-card>
+
+    <div>
+        <button class="button" (click)="onSubmit2()">PLAY</button>
+        
+    </div>
+    <app-card *ngIf="dataFromApi"
+    [id] = 2
+    [dataRecieved] = "dataFromApi"
+    [option1] = "secondCardOptions[0]"
+    [option2] = "secondCardOptions[1]"
+    [option3] = "secondCardOptions[2]"
+    [option4] = "secondCardOptions[3]"
+    ></app-card>
+
+    <div>
+        <button class="button" (click)="onSubmit3()">PLAY</button>
+        
+    </div>
+    <app-card *ngIf="dataFromApi"
+    [id] = 3
+    [dataRecieved] = "dataFromApi"
+    [option1] = "thirdCardOptions[0]"
+    [option2] = "thirdCardOptions[1]"
+    [option3] = "thirdCardOptions[2]"
+    [option4] = "thirdCardOptions[3]"
+    ></app-card>
+
+    <div>
+        <button class="button" (click)="onSubmit4()">PLAY</button>
+        
+    </div>
+    <app-card *ngIf="dataFromApi"
+    [id] = 4
+    [dataRecieved] = "dataFromApi"
+    [option1] = "fourthCardOptions[0]"
+    [option2] = "fourthCardOptions[1]"
+    [option3] = "fourthCardOptions[2]"
+    [option4] = "fourthCardOptions[3]"
+    ></app-card>
+
+    <!-- <div>
+        <button class="button" (click)="onSubmit5()">PLAY</button>
+        
+    </div>
+    <app-card *ngIf="dataFromApi"
+    [dataRecieved] = "dataFromApi"
+    [option1] = "fifthCardOptions[0]"
+    [option2] = "fifthCardOptions[1]"
+    [option3] = "fifthCardOptions[2]"
+    [option4] = "fifthCardOptions[3]"
+    ></app-card> -->
+
+    <div class="card">
+        <!-- your radio buttons -->
+        <a href="/" class="button">Quit Game</a>
+        <a routerLink="/score" routerLinkActive="active" class="button">Submit Answers</a>
+    </div>
+<!-- </div> -->
+</body>
+</html>

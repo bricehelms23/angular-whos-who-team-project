@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="settings.component.css">
+</head>
+<body>
+
+<h1>Settings</h1>
+<div>
+  <h2>Genre:
+    <select [(ngModel)]="selectedGenre" (ngModelChange)="setGenre($event)">
+      <option [value]=""></option>
+      <option [value]="genre" *ngFor="let genre of genres">
+        {{ genre }}
+      </option>
+    </select>
+  </h2>
+</div>
+
+<div class="radio-container">
+    <div class="setting">
+
+      
+
+      <h2>Difficulty</h2>
+      <label>
+        <input type="radio" name="difficulty" [(ngModel)]="difficulty" value="easy">
+        <span>Easy</span>
+      </label>
+      <label>
+        <input type="radio" name="difficulty" [(ngModel)]="difficulty" value="medium">
+        <span>Medium</span>
+      </label>
+      <label>
+        <input type="radio" name="difficulty" [(ngModel)]="difficulty" value="hard">
+        <span>Hard</span>
+      </label>
+    </div>
+  
+    <div class="setting">
+      <h2>Number of Questions</h2>
+      <label>
+        <input type="radio" name="questions" [(ngModel)]="questions" value="5">
+        <span>5</span>
+      </label>
+      <label>
+        <input type="radio" name="questions" [(ngModel)]="questions" value="10">
+        <span>10</span>
+      </label>
+      <label>
+        <input type="radio" name="questions" [(ngModel)]="questions" value="15">
+        <span>15</span>
+      </label>
+    </div>
+  </div>
+
+
+  <div class="button-container">
+    <div class="buttons">
+      <button routerLink="/" routerLinkActive="active">Back</button>
+      <button (click)="saveSettings()" routerLink="/" routerLinkActive="active">Save</button>
+      <button routerLink="/leaderboard" routerLinkActive="active">Leader Board</button>
+    </div>
+  </div>
+  
+  
+  </body>
+  </html>

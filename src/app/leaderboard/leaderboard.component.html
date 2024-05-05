@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="leaderboard.component.css">
+</head>
+<body>
+
+<h1 style="text-align: center;"><em>Leader Board</em></h1>
+
+<div class="board">
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of players; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ player.name }}</td>
+                <td>{{ player.score }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="button-container">
+    <div class="buttons">
+      <button routerLink="/settings" routerLinkActive="active">Back</button>
+    </div>
+  </div>
+  
+</body>
+</html>

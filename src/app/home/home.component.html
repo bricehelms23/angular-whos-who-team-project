@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body style="background-color:#1ED760; text-align: center;">
+
+    <router-outlet></router-outlet>
+
+    <div *ngIf="authLoading || configLoading">Loading...</div>
+    <div *ngIf="!authLoading && !configLoading">
+      <!-- Genre:
+      <select [(ngModel)]="selectedGenre" (ngModelChange)="setGenre($event)">
+        <option [value]=""></option>
+        <option [value]="genre" *ngFor="let genre of genres">
+          {{ genre }}
+        </option>
+      </select> -->
+    </div>
+  
+   <h1><em>Musicle</em></h1>
+   <!-- <button routerLink="/play" routerLinkActive="active" (click)="onSubmit()">Play</button><br> -->
+   <div class="button-container">
+    <div class="buttons">
+      <button [routerLink]="['/play']" [queryParams]="{prop: this.token}" (click)="onSubmit()">Play</button><br>
+      <button routerLink="/settings" routerLinkActive="active">Settings</button>
+    </div>
+    </div>
+  </body>
+</html>

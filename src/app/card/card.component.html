@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="choice">
+      <input type="radio" id="choice1" name="choice" [value]="this.option1" (change)="onChange($event)">
+      <label for="choice1">{{option1}}</label>
+    </div>
+    <div class="choice">
+      <input type="radio" id="choice2" name="choice" [value]="this.option2" (change)="onChange($event)">
+      <label for="choice2">{{option2}}</label>
+    </div>
+    <div class="choice">
+      <input type="radio" id="choice3" name="choice" [value]="this.option3" (change)="onChange($event)">
+      <label for="choice3">{{option3}}</label>
+    </div>
+    <div class="choice">
+      <input type="radio" id="choice4" name="choice" [value]="this.option4" (change)="onChange($event)">
+      <label for="choice4">{{option4}}</label>
+    </div>
+    <button class="button" (click)="onSubmit()">Save</button>
+</div>
