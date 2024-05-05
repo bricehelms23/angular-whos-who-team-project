@@ -1,4 +1,4 @@
-# Group Project 2
+# Cook Systems Group Project 2
 
 # Overview
 
